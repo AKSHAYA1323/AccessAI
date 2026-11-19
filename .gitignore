@@ -1,0 +1,45 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+.venv*/
+venv/
+env/
+ENV/
+
+# Large model weights and checkpoints (>100MB violates GitHub push limits)
+models/
+weights/
+*.pt
+*.pth
+*.bin
+*.safetensors
+*.onnx
+*.h5
+
+# Local datasets and databases
+data/
+*.sqlite3
+*.db
+
+# Test and coverage caches
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDE and editor settings
+.claude/
+.vscode/
+.idea/
+
+# Environment configurations and secrets
+.env
+.env.local
+!.env.example
+
+# OS artifacts
+.DS_Store
+Thumbs.db

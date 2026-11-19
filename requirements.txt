@@ -1,0 +1,23 @@
+# Install PyTorch first (see README) so you get the right CUDA or CPU build.
+ultralytics>=8.3
+transformers>=4.45
+easyocr>=1.7
+opencv-python-headless>=4.9
+Pillow>=10
+numpy>=1.26
+pandas>=2.0
+streamlit>=1.50
+spacy>=3.8,<4
+en_core_web_sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl
+pyttsx3>=2.90
+gTTS>=2.5
+
+# Evaluation
+pycocotools>=2.0.7
+pycocoevalcap>=1.2
+nltk>=3.8
+requests>=2.31
+tqdm>=4.66
+
+# Tests
+pytest>=8

@@ -1,0 +1,12 @@
+[server]
+# Streamlit's file watcher raises errors when it inspects torch internals.
+fileWatcherType = "none"
+maxUploadSize = 25
+
+[browser]
+gatherUsageStats = false
+
+[theme]
+base = "light"
+primaryColor = "#0B5CAD"
+baseFontSize = 18

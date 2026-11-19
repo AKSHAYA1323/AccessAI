@@ -1,0 +1,123 @@
+{
+  "split": "test",
+  "images": 400,
+  "device": "cuda",
+  "models": {
+    "detection": "yolo11s.pt",
+    "caption": "Salesforce/blip-image-captioning-base"
+  },
+  "detection": {
+    "precision": 0.7107,
+    "recall": 0.6037,
+    "ground_truth_objects": 2738,
+    "confidence_threshold": 0.25,
+    "match_iou": 0.5,
+    "mAP@.50:.95": 0.493,
+    "mAP@.50": 0.6557
+  },
+  "captions": {
+    "BLEU-1": 0.7033,
+    "BLEU-2": 0.5706,
+    "BLEU-3": 0.4455,
+    "BLEU-4": 0.3443,
+    "CIDEr": 1.2021,
+    "METEOR": 0.2667
+  },
+  "response_time": {
+    "detection": {
+      "mean_ms": 247.1,
+      "median_ms": 237.2,
+      "p95_ms": 350.5
+    },
+    "caption": {
+      "mean_ms": 565.0,
+      "median_ms": 505.6,
+      "p95_ms": 923.7
+    },
+    "ocr": {
+      "mean_ms": 169.4,
+      "median_ms": 134.1,
+      "p95_ms": 399.6
+    },
+    "claim_check": {
+      "mean_ms": 5.1,
+      "median_ms": 4.0,
+      "p95_ms": 9.0
+    },
+    "total": {
+      "mean_ms": 573.9,
+      "median_ms": 514.2,
+      "p95_ms": 931.6
+    }
+  },
+  "evidence_consistency": {
+    "mean_per_image": 0.8298,
+    "images_with_checkable_claims": 350,
+    "claim_status_counts": {
+      "supported": 435,
+      "unverifiable": 431,
+      "inference": 412,
+      "weak": 49,
+      "not_confirmed": 49
+    },
+    "validated_against_coco_annotations": {
+      "supported_claims_truly_present": 0.9816,
+      "weak_claims_truly_present": 0.898,
+      "not_confirmed_claims_truly_absent": 0.7143,
+      "counts": {
+        "supported:present": 427,
+        "weak:present": 44,
+        "not_confirmed:absent": 35,
+        "not_confirmed:present": 14,
+        "supported:absent": 8,
+        "weak:absent": 5
+      }
+    }
+  },
+  "conditions": {
+    "ordinary": {
+      "images": 240,
+      "precision": 0.7068,
+      "recall": 0.7203,
+      "ground_truth_objects": 783,
+      "mean_consistency": 0.8333
+    },
+    "cluttered": {
+      "images": 96,
+      "precision": 0.7069,
+      "recall": 0.521,
+      "ground_truth_objects": 1620,
+      "mean_consistency": 0.8259
+    },
+    "occluded": {
+      "images": 117,
+      "precision": 0.6997,
+      "recall": 0.5664,
+      "ground_truth_objects": 1296,
+      "mean_consistency": 0.817
+    },
+    "low_light": {
+      "images": 400,
+      "precision": 0.741,
+      "recall": 0.5508,
+      "ground_truth_objects": 2738,
+      "mean_consistency": 0.8173
+    }
+  },
+  "low_light_flag_rate_on_darkened_images": 1.0,
+  "uncertainty_flag_counts": {
+    "low_confidence_detections": 260,
+    "low_confidence_text": 40,
+    "unconfirmed_claims": 48,
+    "low_light": 5,
+    "blurry": 2,
+    "low_confidence_caption": 5,
+    "low_resolution": 9,
+    "no_detections": 6
+  },
+  "ocr_similarity_on_rendered_text": {
+    "clean": 0.9944,
+    "angled": 0.7624,
+    "low_contrast": 0.9944
+  }
+}
